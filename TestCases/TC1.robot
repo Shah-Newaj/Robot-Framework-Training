@@ -9,6 +9,7 @@ ${url}  http://dceims.bdeducation.org.bd/schoolAdmin
 *** Test Cases ***
 LoginTest
     open browser  ${url}    ${browser}
+    Maximize Browser Window
     LogIntoApplication
     close browser
 
