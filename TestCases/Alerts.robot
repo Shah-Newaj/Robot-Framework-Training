@@ -17,7 +17,4 @@ Handling Alerts
 #    Alert Should Be Present     Press a button!
 
 
-
-
-
 *** Keywords ***
