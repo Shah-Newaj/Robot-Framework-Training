@@ -2,8 +2,6 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-#${browser}  Chrome
-#${url}  https://demo.automationtesting.in/Windows.html
 
 *** Test Cases ***
 Mutiple Browsers
