@@ -1,38 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220827 11:57:40.355" rpa="false" schemaversion="3">
-<suite id="s1" name="CaptureScreen" source="C:\Users\Server\PycharmProjects\Robot-Framework-Training\Testcases\CaptureScreen.robot">
-<test id="s1-t1" name="LoginTC" line="8">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220827 12:26:12.666" rpa="false" schemaversion="3">
+<suite id="s1" name="MouseOperations" source="C:\Users\Server\PycharmProjects\Robot-Framework-Training\Testcases\MouseOperations.robot">
+<test id="s1-t1" name="Mouse Operations" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.selenium.dev/</arg>
+<arg>https://swisnl.github.io/jQuery-contextMenu/demo.html</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220827 11:57:40.564" level="INFO">Opening browser 'Chrome' to base url 'https://www.selenium.dev/'.</msg>
-<status status="PASS" starttime="20220827 11:57:40.564" endtime="20220827 11:57:44.057"/>
+<msg timestamp="20220827 12:26:12.877" level="INFO">Opening browser 'Chrome' to base url 'https://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
+<status status="PASS" starttime="20220827 12:26:12.877" endtime="20220827 12:26:15.164"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220827 11:57:44.057" endtime="20220827 11:57:44.189"/>
+<status status="PASS" starttime="20220827 12:26:15.165" endtime="20220827 12:26:15.314"/>
 </kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>xpath://*[@id="selenium_logo"]</arg>
-<arg>C:/Users/Server/PycharmProjects/Robot-Framework-Training/TestCases/Logo.png</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20220827 11:57:44.271" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TestCases/Logo.png"&gt;&lt;img src="TestCases/Logo.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220827 11:57:44.190" endtime="20220827 11:57:44.271"/>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>xpath://span[@class='context-menu-one btn btn-neutral']</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220827 12:26:15.314" endtime="20220827 12:26:15.630"/>
 </kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>C:/Users/Server/PycharmProjects/Robot-Framework-Training/TestCases/LoginTC.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220827 11:57:44.381" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TestCases/LoginTC.png"&gt;&lt;img src="TestCases/LoginTC.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220827 11:57:44.271" endtime="20220827 11:57:44.382"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220827 12:26:18.631" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220827 12:26:15.631" endtime="20220827 12:26:18.632"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220827 12:26:18.633" level="INFO">Opening url 'https://testautomationpractice.blogspot.com/'</msg>
+<status status="PASS" starttime="20220827 12:26:18.633" endtime="20220827 12:26:25.390"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220827 12:26:25.391" endtime="20220827 12:26:25.397"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>xpath://button[normalize-space()='Copy Text']</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20220827 12:26:25.397" level="INFO">Double clicking element 'xpath://button[normalize-space()='Copy Text']'.</msg>
+<status status="PASS" starttime="20220827 12:26:25.397" endtime="20220827 12:26:25.699"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220827 12:26:28.706" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220827 12:26:25.700" endtime="20220827 12:26:28.706"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220827 12:26:28.706" level="INFO">Opening url 'http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html'</msg>
+<status status="PASS" starttime="20220827 12:26:28.706" endtime="20220827 12:26:37.596"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220827 12:26:37.597" endtime="20220827 12:26:37.603"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>id:box6</arg>
+<arg>id:box106</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20220827 12:26:37.604" endtime="20220827 12:26:38.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220827 12:26:41.200" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220827 12:26:38.188" endtime="20220827 12:26:41.200"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220827 11:57:44.382" endtime="20220827 11:57:46.486"/>
+<status status="PASS" starttime="20220827 12:26:41.201" endtime="20220827 12:26:43.357"/>
 </kw>
-<status status="PASS" starttime="20220827 11:57:40.563" endtime="20220827 11:57:46.487"/>
+<status status="PASS" starttime="20220827 12:26:12.876" endtime="20220827 12:26:43.358"/>
 </test>
-<status status="PASS" starttime="20220827 11:57:40.357" endtime="20220827 11:57:46.490"/>
+<status status="PASS" starttime="20220827 12:26:12.668" endtime="20220827 12:26:43.363"/>
 </suite>
 <statistics>
 <total>
@@ -41,7 +83,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="CaptureScreen">CaptureScreen</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MouseOperations">MouseOperations</stat>
 </suite>
 </statistics>
 <errors>
