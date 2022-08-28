@@ -1,43 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220828 09:43:39.590" rpa="false" schemaversion="3">
-<suite id="s1" name="ScrollingPage" source="C:\Users\Server\PycharmProjects\Robot-Framework-Training\Testcases\ScrollingPage.robot">
-<test id="s1-t1" name="Scrolling Test" line="10">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220828 09:43:39.806" level="INFO">Opening browser 'Chrome' to base url 'https://www.countries-ofthe-world.com/flags-of-the-world.html'.</msg>
-<status status="PASS" starttime="20220828 09:43:39.805" endtime="20220828 09:43:45.127"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220828 09:43:45.128" endtime="20220828 09:43:45.250"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220828 09:43:45.251" level="INFO">Executing JavaScript:
-window.scrollTo(0,document.body.scrollHeight)
-Without any arguments.</msg>
-<status status="PASS" starttime="20220828 09:43:45.251" endtime="20220828 09:43:45.262"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220828 14:18:51.303" rpa="false" schemaversion="3">
+<suite id="s1" name="ForLoopDemo" source="C:\Users\Server\PycharmProjects\Robot-Framework-Training\Testcases\ForLoopDemo.robot">
+<test id="s1-t1" name="ForLoop4withExit" line="25">
+<kw name="Create List" library="BuiltIn">
+<var>@{List}</var>
+<arg>1</arg>
+<arg>2</arg>
 <arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220828 09:43:48.270" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220828 09:43:45.263" endtime="20220828 09:43:48.270"/>
+<arg>4</arg>
+<arg>5</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220828 14:18:51.330" level="INFO">@{List} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20220828 14:18:51.330" endtime="20220828 14:18:51.330"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,-document.body.scrollHeight)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220828 09:43:48.270" level="INFO">Executing JavaScript:
-window.scrollTo(0,-document.body.scrollHeight)
-Without any arguments.</msg>
-<status status="PASS" starttime="20220828 09:43:48.270" endtime="20220828 09:43:48.281"/>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{LIST}</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220828 14:18:51.331" endtime="20220828 14:18:51.332"/>
 </kw>
-<status status="PASS" starttime="20220828 09:43:39.804" endtime="20220828 09:43:48.281"/>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220828 14:18:51.332" endtime="20220828 14:18:51.332"/>
+</kw>
+<status status="PASS" starttime="20220828 14:18:51.331" endtime="20220828 14:18:51.332"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220828 14:18:51.332" endtime="20220828 14:18:51.333"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20220828 14:18:51.333" endtime="20220828 14:18:51.333"/>
+</kw>
+<status status="PASS" starttime="20220828 14:18:51.332" endtime="20220828 14:18:51.333"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220828 14:18:51.333" endtime="20220828 14:18:51.333"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>${i}==3</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20220828 14:18:51.334" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20220828 14:18:51.333" endtime="20220828 14:18:51.334"/>
+</kw>
+<status status="PASS" starttime="20220828 14:18:51.333" endtime="20220828 14:18:51.334"/>
+</iter>
+<status status="PASS" starttime="20220828 14:18:51.331" endtime="20220828 14:18:51.334"/>
+</for>
+<status status="PASS" starttime="20220828 14:18:51.329" endtime="20220828 14:18:51.335"/>
 </test>
-<status status="PASS" starttime="20220828 09:43:39.592" endtime="20220828 09:43:48.284"/>
+<status status="PASS" starttime="20220828 14:18:51.305" endtime="20220828 14:18:51.336"/>
 </suite>
 <statistics>
 <total>
@@ -46,7 +72,7 @@ Without any arguments.</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="ScrollingPage">ScrollingPage</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="ForLoopDemo">ForLoopDemo</stat>
 </suite>
 </statistics>
 <errors>
