@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${LOGIN URL}      https://testautomationpractice.blogspot.com/
+${LOGIN URL}      https://admin-demo.nopcommerce.com/
 ${BROWSER}      Chrome
 
 *** Keywords ***
