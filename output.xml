@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220831 22:36:18.577" rpa="false" schemaversion="3">
-<suite id="s1" name="DBTesting" source="C:\Users\Shah Newaj\PycharmProjects\Robot-Framework-Training\TestCases\DBTesting.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220902 16:26:08.997" rpa="false" schemaversion="3">
+<suite id="s1" name="DBTesting" source="C:\Users\user\PycharmProjects\Robot-Framework-Training\TestCases\DBTesting.robot">
 <kw name="Connect To Database" library="DatabaseLibrary" type="SETUP">
 <arg>pymysql</arg>
 <arg>${DBName}</arg>
@@ -10,41 +10,33 @@
 <arg>${DBPort}</arg>
 <doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
 connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
-<msg timestamp="20220831 22:36:19.748" level="INFO">Connecting using : pymysql.connect(db=mydb, user=root, passwd=root, host=LocalHost, port=3306, charset=None) </msg>
-<status status="PASS" starttime="20220831 22:36:19.311" endtime="20220831 22:36:20.769"/>
+<msg timestamp="20220902 16:26:09.083" level="INFO">Connecting using : pymysql.connect(db=mydb, user=root, passwd=root, host=LocalHost, port=3306, charset=None) </msg>
+<status status="PASS" starttime="20220902 16:26:09.058" endtime="20220902 16:26:09.093"/>
 </kw>
-<test id="s1-t1" name="Inserting data in person table" line="23">
-<kw name="Execute Sql String" library="DatabaseLibrary">
-<var>${output}</var>
-<arg>Insert into person values(101,"Shah","Newaj");</arg>
-<doc>Executes the sqlString as SQL commands. Useful to pass arguments to your sql. Set optional input `sansTran` to
-True to run command without an explicit transaction commit or rollback.</doc>
-<msg timestamp="20220831 22:36:20.774" level="INFO">Executing : Execute SQL String  |  Insert into person values(101,"Shah","Newaj"); </msg>
-<msg timestamp="20220831 22:36:22.461" level="INFO">${output} = None</msg>
-<status status="PASS" starttime="20220831 22:36:20.769" endtime="20220831 22:36:22.461"/>
+<test id="s1-t1" name="Retrieve Records from person table" line="47">
+<kw name="Query" library="DatabaseLibrary">
+<var>${queryResult}</var>
+<arg>select * from mydb.person</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20220902 16:26:09.093" level="INFO">Executing : Query  |  select * from mydb.person </msg>
+<msg timestamp="20220902 16:26:09.093" level="INFO">${queryResult} = ((101, 'Shah', 'Newaj'), (102, 'Hasanul', 'Banna'), (103, 'Muhammad', 'Newaj'), (104, 'Tasnim', 'Hasan'), (105, 'Ahlia', 'Newaj'))</msg>
+<status status="PASS" starttime="20220902 16:26:09.093" endtime="20220902 16:26:09.093"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${output}</arg>
+<arg>${queryResult}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220831 22:36:22.461" endtime="20220831 22:36:22.461"/>
+<status status="PASS" starttime="20220902 16:26:09.093" endtime="20220902 16:26:09.098"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${output}</arg>
-<arg>None</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20220831 22:36:22.466" level="INFO">Argument types are:
-&lt;class 'NoneType'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20220831 22:36:22.466" endtime="20220831 22:36:22.466"/>
-</kw>
-<status status="PASS" starttime="20220831 22:36:20.769" endtime="20220831 22:36:22.466"/>
+<status status="PASS" starttime="20220902 16:26:09.093" endtime="20220902 16:26:09.098"/>
 </test>
 <kw name="Disconnect From Database" library="DatabaseLibrary" type="TEARDOWN">
 <doc>Disconnects from the database.</doc>
-<msg timestamp="20220831 22:36:22.476" level="INFO">Executing : Disconnect From Database</msg>
-<status status="PASS" starttime="20220831 22:36:22.476" endtime="20220831 22:36:22.476"/>
+<msg timestamp="20220902 16:26:09.098" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20220902 16:26:09.098" endtime="20220902 16:26:09.098"/>
 </kw>
-<status status="PASS" starttime="20220831 22:36:18.582" endtime="20220831 22:36:22.476"/>
+<status status="PASS" starttime="20220902 16:26:08.999" endtime="20220902 16:26:09.098"/>
 </suite>
 <statistics>
 <total>
