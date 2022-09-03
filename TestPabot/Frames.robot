@@ -23,5 +23,8 @@ Handling Alerts
     Click Link    Help
     Unselect Frame
 
+    Sleep    3 seconds
+    Close All Browsers
+
 
 *** Keywords ***
